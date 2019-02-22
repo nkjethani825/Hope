@@ -11,12 +11,12 @@ public class WikiTest
          WebDriver driver=null;
         System.setProperty("webdriver.chrome.driver","C:\\Users\\MP\\Downloads\\chromedriver_win32\\chromedriver.exe");
         driver=new ChromeDriver();
-        driver.get("https://www.phptravels.net/m-flights");
+        driver.get("http://demo.guru99.com/test/newtours/register.php");
         Thread.sleep(10000);
-        Select elment= new Select(driver.findElement(By.name("cabinclass")));
-        driver.findElement(By.name("cabinclass")).click();
+        Select elment= new Select(driver.findElement(By.name("country")));
+       // driver.findElement(By.name("cabinclass")).click();
         Thread.sleep(2000);
-        elment.selectByValue("first");
+        elment.selectByVisibleText("ANTARCTICA");
 //        elment=driver.findElement(By.linkText("Featured content"));
 //        elment.click();
 
