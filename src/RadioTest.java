@@ -12,10 +12,15 @@ public class RadioTest {
         WebDriver driver=new ChromeDriver();
 
         //Load browser with site
-        driver.get("http://demo.guru99.com/test/facebook.html");
+      //  driver.get("http://demo.guru99.com/test/facebook.html"); //Use this site for last example
+        driver.get("http://demo.guru99.com/test/radio.html");
         Thread.sleep(3000);
-     //   driver.findElement(By.id("vfb-7-3")).click();
-
+        driver.findElement(By.id("vfb-7-3")).click();
+        driver.findElement(By.id("vfb-7-3")).click();
+        if(driver.findElement(By.id("vfb-7-3")).isSelected())
+            System.out.println("Radio button is selected");
+        else
+            driver.findElement(By.id("vfb-7-3")).click();
      //   driver.findElement(By.id("vfb-7-2")).click();
 
        // driver.findElement(By.id("vfb-6-0")).click();
@@ -31,7 +36,7 @@ public class RadioTest {
      //   driver.findElement(By.cssSelector("b.caret")).click();
 
         //Example of tag, class Name and attribute
-        driver.findElement(By.cssSelector("input.inputtext[tabindex=1]")).sendKeys("Heyyy");
+     //   driver.findElement(By.cssSelector("input.inputtext[tabindex='2']")).sendKeys("Heyyy");
 
     }
 }
